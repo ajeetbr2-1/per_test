@@ -249,14 +249,13 @@ const CustomerDashboard: React.FC = () => {
       {/* Tab Panels */}
       <TabPanel value={tabValue} index={0}>
         {/* Active Bookings */}
-        <Grid container spacing={3}>
+        <Box>
           {bookings
             .filter(booking => !['COMPLETED', 'CANCELLED', 'REJECTED'].includes(booking.status))
             .map((booking) => (
-              <Grid item xs={12} key={booking._id}>
-                <Card>
+              <Card key={booking._id} sx={{ mb: 2 }}>
                   <CardContent>
-                    <Box display="flex" justifyContent="between" alignItems="start" mb={2}>
+                    <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
                       <Typography variant="h6">
                         {booking.provider.userId.name}
                       </Typography>
@@ -328,18 +327,17 @@ const CustomerDashboard: React.FC = () => {
                     </Box>
                   </CardContent>
                 </Card>
-              </Grid>
             ))}
-        </Grid>
+        </Box>
       </TabPanel>
 
       <TabPanel value={tabValue} index={1}>
         {/* Completed Bookings */}
-        <Grid container spacing={3}>
+        <Box display="flex" flexDirection="column" gap={2}>
           {bookings
             .filter(booking => booking.status === 'COMPLETED')
             .map((booking) => (
-              <Grid item xs={12} md={6} key={booking._id}>
+              <Card key={booking._id}>
                 <Card>
                   <CardContent>
                     <Typography variant="h6" gutterBottom>
@@ -360,9 +358,8 @@ const CustomerDashboard: React.FC = () => {
                     </Button>
                   </CardContent>
                 </Card>
-              </Grid>
             ))}
-        </Grid>
+        </Box>
       </TabPanel>
 
       <TabPanel value={tabValue} index={2}>
@@ -390,48 +387,40 @@ const CustomerDashboard: React.FC = () => {
       <Dialog open={bookingDialog} onClose={() => setBookingDialog(false)} maxWidth="md" fullWidth>
         <DialogTitle>{t('booking.bookNow')}</DialogTitle>
         <DialogContent>
-          <Grid container spacing={2} sx={{ mt: 1 }}>
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label={t('booking.selectDateTime')}
-                type="datetime-local"
-                value={bookingForm.preferredDate}
-                onChange={(e) => setBookingForm({ ...bookingForm, preferredDate: e.target.value })}
-                InputLabelProps={{ shrink: true }}
-              />
-            </Grid>
+          <Box display="flex" flexDirection="column" gap={2} sx={{ mt: 1 }}>
+            <TextField
+              fullWidth
+              label={t('booking.selectDateTime')}
+              type="datetime-local"
+              value={bookingForm.preferredDate}
+              onChange={(e) => setBookingForm({ ...bookingForm, preferredDate: e.target.value })}
+              InputLabelProps={{ shrink: true }}
+            />
             
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Service Description"
-                multiline
-                rows={3}
-                value={bookingForm.description}
-                onChange={(e) => setBookingForm({ ...bookingForm, description: e.target.value })}
-              />
-            </Grid>
+            <TextField
+              fullWidth
+              label="Service Description"
+              multiline
+              rows={3}
+              value={bookingForm.description}
+              onChange={(e) => setBookingForm({ ...bookingForm, description: e.target.value })}
+            />
             
-            <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label={t('booking.serviceAddress')}
-                value={bookingForm.address}
-                onChange={(e) => setBookingForm({ ...bookingForm, address: e.target.value })}
-              />
-            </Grid>
+            <TextField
+              fullWidth
+              label={t('booking.serviceAddress')}
+              value={bookingForm.address}
+              onChange={(e) => setBookingForm({ ...bookingForm, address: e.target.value })}
+            />
             
-            <Grid item xs={6}>
+            <Box display="flex" gap={2}>
               <TextField
                 fullWidth
                 label="Pincode"
                 value={bookingForm.pincode}
                 onChange={(e) => setBookingForm({ ...bookingForm, pincode: e.target.value })}
               />
-            </Grid>
-            
-            <Grid item xs={6}>
+              
               <TextField
                 fullWidth
                 label={t('booking.estimatedDuration')}
@@ -440,22 +429,20 @@ const CustomerDashboard: React.FC = () => {
                 onChange={(e) => setBookingForm({ ...bookingForm, estimatedDuration: Number(e.target.value) })}
                 InputProps={{ endAdornment: 'hours' }}
               />
-            </Grid>
+            </Box>
             
-            <Grid item xs={12}>
-              <FormControl fullWidth>
-                <InputLabel>{t('booking.paymentMethod')}</InputLabel>
-                <Select
-                  value={bookingForm.paymentMethod}
-                  onChange={(e) => setBookingForm({ ...bookingForm, paymentMethod: e.target.value as any })}
-                >
-                  <MenuItem value="cash">{t('booking.cash')}</MenuItem>
-                  <MenuItem value="online">{t('booking.online')}</MenuItem>
-                  <MenuItem value="card">{t('booking.card')}</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-          </Grid>
+            <FormControl fullWidth>
+              <InputLabel>{t('booking.paymentMethod')}</InputLabel>
+              <Select
+                value={bookingForm.paymentMethod}
+                onChange={(e) => setBookingForm({ ...bookingForm, paymentMethod: e.target.value as any })}
+              >
+                <MenuItem value="cash">{t('booking.cash')}</MenuItem>
+                <MenuItem value="online">{t('booking.online')}</MenuItem>
+                <MenuItem value="card">{t('booking.card')}</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setBookingDialog(false)}>{t('buttons.cancel')}</Button>
