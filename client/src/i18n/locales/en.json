@@ -1,0 +1,88 @@
+{
+  "welcome": "Welcome to Service Provider",
+  "findServices": "Find Services Near You",
+  "searchPlaceholder": "Enter your pincode or area",
+  "categories": {
+    "plumbing": "Plumbing",
+    "electrical": "Electrical",
+    "cleaning": "Cleaning",
+    "gardening": "Gardening",
+    "painting": "Painting",
+    "carpentry": "Carpentry",
+    "appliance_repair": "Appliance Repair",
+    "other": "Other"
+  },
+  "filters": {
+    "all": "All",
+    "freeNow": "Free Now",
+    "rating": "Rating 4.0+",
+    "aadhaarVerified": "Aadhaar Verified",
+    "priceRange": "Price Range"
+  },
+  "provider": {
+    "hourlyRate": "₹{{rate}}/hour",
+    "rating": "{{rating}} ({{count}} reviews)",
+    "verified": "Aadhaar Verified",
+    "online": "Online",
+    "offline": "Offline",
+    "busy": "Busy"
+  },
+  "booking": {
+    "bookNow": "Book Now",
+    "selectDateTime": "Select Date & Time",
+    "serviceAddress": "Service Address",
+    "estimatedDuration": "Estimated Duration",
+    "totalAmount": "Total Amount",
+    "paymentMethod": "Payment Method",
+    "cash": "Cash",
+    "online": "Online",
+    "card": "Card"
+  },
+  "dashboard": {
+    "myBookings": "My Bookings",
+    "newRequests": "New Requests",
+    "liveJobs": "Live Jobs",
+    "earnings": "Earnings",
+    "analytics": "Analytics",
+    "profile": "Profile"
+  },
+  "status": {
+    "REQUESTED": "Requested",
+    "ACCEPTED": "Accepted",
+    "REJECTED": "Rejected",
+    "ON_THE_WAY": "On the Way",
+    "IN_SERVICE": "In Service",
+    "COMPLETED": "Completed",
+    "CANCELLED": "Cancelled"
+  },
+  "buttons": {
+    "accept": "Accept",
+    "decline": "Decline",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset"
+  },
+  "onboarding": {
+    "quickAdd": "Quick Add Provider",
+    "fullOnboarding": "Complete Onboarding",
+    "personalInfo": "Personal Information",
+    "serviceDetails": "Service Details",
+    "experience": "Experience",
+    "aadhaarKyc": "Aadhaar e-KYC",
+    "upgradePrompt": "Upgrade to verified provider for more bookings!"
+  },
+  "voiceSearch": "🎤 Voice Search",
+  "languageSwitch": "Language",
+  "trustBadges": {
+    "aadhaar_verified": "Aadhaar Verified",
+    "top_rated": "Top Rated",
+    "quick_response": "Quick Response",
+    "new": "New",
+    "experienced": "Experienced"
+  }
+}
