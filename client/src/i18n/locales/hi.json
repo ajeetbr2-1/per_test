@@ -1,0 +1,88 @@
+{
+  "welcome": "सेवा प्रदाता में आपका स्वागत है",
+  "findServices": "अपने पास सेवाएं खोजें",
+  "searchPlaceholder": "अपना पिनकोड या क्षेत्र दर्ज करें",
+  "categories": {
+    "plumbing": "प्लंबिंग",
+    "electrical": "इलेक्ट्रिकल",
+    "cleaning": "सफाई",
+    "gardening": "बागवानी",
+    "painting": "पेंटिंग",
+    "carpentry": "बढ़ईगीरी",
+    "appliance_repair": "उपकरण मरम्मत",
+    "other": "अन्य"
+  },
+  "filters": {
+    "all": "सभी",
+    "freeNow": "अभी मुफ्त",
+    "rating": "रेटिंग 4.0+",
+    "aadhaarVerified": "आधार सत्यापित",
+    "priceRange": "मूल्य सीमा"
+  },
+  "provider": {
+    "hourlyRate": "₹{{rate}}/घंटा",
+    "rating": "{{rating}} ({{count}} समीक्षाएं)",
+    "verified": "आधार सत्यापित",
+    "online": "ऑनलाइन",
+    "offline": "ऑफलाइन",
+    "busy": "व्यस्त"
+  },
+  "booking": {
+    "bookNow": "अभी बुक करें",
+    "selectDateTime": "दिनांक और समय चुनें",
+    "serviceAddress": "सेवा का पता",
+    "estimatedDuration": "अनुमानित समय",
+    "totalAmount": "कुल राशि",
+    "paymentMethod": "भुगतान का तरीका",
+    "cash": "नकद",
+    "online": "ऑनलाइन",
+    "card": "कार्ड"
+  },
+  "dashboard": {
+    "myBookings": "मेरी बुकिंग",
+    "newRequests": "नए अनुरोध",
+    "liveJobs": "लाइव जॉब्स",
+    "earnings": "आय",
+    "analytics": "विश्लेषण",
+    "profile": "प्रोफ़ाइल"
+  },
+  "status": {
+    "REQUESTED": "अनुरोधित",
+    "ACCEPTED": "स्वीकार किया गया",
+    "REJECTED": "अस्वीकार किया गया",
+    "ON_THE_WAY": "रास्ते में",
+    "IN_SERVICE": "सेवा में",
+    "COMPLETED": "पूर्ण",
+    "CANCELLED": "रद्द"
+  },
+  "buttons": {
+    "accept": "स्वीकार करें",
+    "decline": "अस्वीकार करें",
+    "cancel": "रद्द करें",
+    "submit": "जमा करें",
+    "save": "सेव करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "search": "खोजें",
+    "filter": "फिल्टर",
+    "reset": "रीसेट"
+  },
+  "onboarding": {
+    "quickAdd": "त्वरित प्रदाता जोड़ें",
+    "fullOnboarding": "पूर्ण ऑनबोर्डिंग",
+    "personalInfo": "व्यक्तिगत जानकारी",
+    "serviceDetails": "सेवा विवरण",
+    "experience": "अनुभव",
+    "aadhaarKyc": "आधार ई-केवाईसी",
+    "upgradePrompt": "अधिक बुकिंग के लिए सत्यापित प्रदाता में अपग्रेड करें!"
+  },
+  "voiceSearch": "🎤 वॉयस सर्च",
+  "languageSwitch": "भाषा",
+  "trustBadges": {
+    "aadhaar_verified": "आधार सत्यापित",
+    "top_rated": "टॉप रेटेड",
+    "quick_response": "त्वरित प्रतिक्रिया",
+    "new": "नया",
+    "experienced": "अनुभवी"
+  }
+}
